@@ -1,0 +1,24 @@
+# MISP Configuration
+misp:
+  url: "https://your-misp-instance.com"
+  api_key: "${MISP_API_KEY}"  # From environment variables
+  verify_tls: true
+
+# Kafka Configuration
+kafka:
+  bootstrap_servers: "localhost:9092"
+  topics:
+    alerts: "shieldnet-alerts"
+    raw_events: "shieldnet-raw-events"
+  ssl:
+    enabled: false
+    ca_path: "/path/to/ca.crt"
+
+# Security Configuration
+security:
+  rate_limits:
+    api: "100/minute"
+    detection: "5/minute"
+  encryption:
+    enabled: true
+    key_path: "./secrets/encryption.key"

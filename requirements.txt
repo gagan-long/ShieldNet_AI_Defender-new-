@@ -1,0 +1,24 @@
+# requirements.txt
+fastapi
+uvicorn
+streamlit
+gradio
+transformers
+torch
+tensorflow
+adversarial-robustness-toolbox
+cleverhans
+elasticsearch
+confluent-kafka
+pymisp
+langchain
+#llama-cpp-python 
+python-magic      
+cryptography   
+python-dotenv   
+pre-commit      
+bandit          
+pytest-cov     
+slowapi
+requests
+python-multipart

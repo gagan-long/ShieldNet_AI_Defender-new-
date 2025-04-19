@@ -1,0 +1,11 @@
+/* Add to interfaces/web/assets/ */
+.stTextInput>div>div>input {
+    background-color: #f0f2f6;
+    border-radius: 8px;
+}
+
+.stButton>button {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 8px;
+}

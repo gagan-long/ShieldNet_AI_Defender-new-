@@ -1,0 +1,12 @@
+.venv
+# Threat intelligence
+core/phishing_detection/threat_feeds/known_phishing_domains.txt
+
+# Media files
+core/deepfake_detection/sample_media/*.mp4
+core/deepfake_detection/sample_media/*.jpg
+
+# Environment variables
+
+.env
+config/local_*.yaml

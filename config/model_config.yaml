@@ -1,0 +1,25 @@
+# Adversarial Detection
+adversarial:
+  epsilon: 0.1
+  model: "resnet50"
+  detection_threshold: 0.85
+
+# Deepfake Detection
+deepfake:
+  model: "facebook/deit-base-patch16-224"
+  frame_analysis_interval: 30  # frames
+  confidence_threshold: 0.9
+
+# Phishing Detection
+phishing:
+  nlp_model: "distilbert-base-uncased"
+  keyword_weights:
+    urgent: 0.8
+    password: 0.9
+    verify: 0.7
+  min_confidence: 0.75
+
+# Anomaly Detection
+anomaly:
+  contamination: 0.01
+  window_size: 1000

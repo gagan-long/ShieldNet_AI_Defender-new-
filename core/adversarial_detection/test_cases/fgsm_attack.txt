@@ -1,0 +1,19 @@
+[Adversarial Example - FGSM Attack on Image Classifier]
+Original: A cat sitting on a mat
+Adversarial: A cat sitting on a mat with imperceptible noise patterns designed to force misclassification to 'dog'
+
+[Attack Parameters]
+Epsilon: 0.1
+Iterations: 10
+Target Class: 207 (Golden Retriever)
+
+[Sample Input]
+Normalized pixel values: [0.485, 0.456, 0.406, 0.229, 0.224, 0.225, ...]
+
+
+[Adversarial Example Format]
+Normalized pixel values: [0.485, 0.456, 0.406, 0.229, 0.224, 0.225]
+
+[Attack Parameters]
+Epsilon: 0.1
+Target Class: 207

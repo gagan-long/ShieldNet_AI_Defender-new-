@@ -1,0 +1,7 @@
+phishing:
+  min_confidence: 0.9
+  notify_email: "soc@your-org.com"
+deepfake:
+  frame_analysis_window: 30  # Frames to analyze
+adversarial:
+  max_retries: 3  # Allowed suspicious attempts
