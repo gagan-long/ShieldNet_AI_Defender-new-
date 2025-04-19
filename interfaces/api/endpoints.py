@@ -5,11 +5,16 @@ from slowapi.errors import RateLimitExceeded
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from config import ConfigLoader
+# from config.config_loader import ConfigLoader  # Modified import
+# In endpoints.py
+
+
 
 # Import schemas and core logic
-from ..core.phishing_detection import analyze_text
+# from ..core.phishing_detection import analyze_text
 from .schemas import PhishingRequest, DetectionResult
 
+api_config = ConfigLoader().load_api_config()
 # Initialize rate limiter
 limiter = Limiter(key_func=get_remote_address)
 app = FastAPI()
