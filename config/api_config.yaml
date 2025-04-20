@@ -1,7 +1,7 @@
 # MISP Configuration
 misp:
   url: "https://your-misp-instance.com"
-  api_key: "${AoVouQ8jJprEwZGM6SFemTY68MsS5fEys2BOuTGT}"  # From environment variables
+  api_key: "${MISP_API_KEY}"  # From environment variables
   verify_tls: true
 
 # Kafka Configuration

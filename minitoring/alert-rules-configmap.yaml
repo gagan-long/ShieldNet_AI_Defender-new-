@@ -1,0 +1,4 @@
+kubectl apply -f monitoring/alert-rules-configmap.yaml
+az monitor scheduled-query create -g ShieldNet-RG -n "AI-Anomalies" --scopes $WORKSPACE_ID \
+  --condition "count 'SecurityAlert' | where Properties['AlertType'] == 'AI_Security'" \
+  --action-group $ACTION_GROUP_ID

@@ -1,0 +1,17 @@
+
+{
+    "properties": {
+      "policyType": "BuiltIn",
+      "displayName": "AI Model Integrity Monitoring",
+      "policyRule": {
+        "if": {
+          "allOf": [
+            { "equals": "Microsoft.MachineLearningServices/workspaces", "field": "type" },
+            { "exists": "false", "field": "Microsoft.MachineLearningServices/workspaces/encryption" }
+          ]
+        },
+        "then": { "effect": "audit" }
+      }
+    }
+  }
+  

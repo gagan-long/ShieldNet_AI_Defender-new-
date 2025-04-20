@@ -1,0 +1,14 @@
+
+name: Deploy Monitoring
+on: push
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker-compose up -d --build
+      - run: |
+          kubectl apply -f monitoring/k8s/
+          az security automation create --resource-group ShieldNet-RG \
+            --name "AI-Monitoring" \
+            --actions '[{"actionType":"LogicApp","logicAppResourceId":"..."}]'

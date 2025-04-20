@@ -1,0 +1,4 @@
+email_id,text,label
+1,"Dear user, your account will be suspended unless you verify your password.",phishing
+2,"Meeting scheduled for tomorrow at 10 AM.",benign
+3,"Your PayPal account has been limited. Click here to resolve.",phishing

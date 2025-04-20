@@ -1,0 +1,27 @@
+version: 1.0
+rules:
+  - name: "High Severity Phishing Alert"
+    conditions:
+      event_type: "phishing_detection"
+      severity: 5
+    actions:
+      - type: "webhook"
+        url: "https://hooks.slack.com/services/YOUR_WEBHOOK"
+      - type: "email"
+        recipients: ["soc@shieldnet.ai"]
+
+  - name: "Adversarial Pattern Detected"
+    conditions:
+      event_type: "adversarial_detection"
+      confidence: ">0.9"
+    actions:
+      - type: "pagerduty"
+        service_key: "YOUR_PD_KEY"
+
+  - name: "Model Inversion Attempt"
+    conditions:
+      event_type: "inversion_detection"
+      query_count: ">10"
+    actions:
+      - type: "webhook"
+        url: "https://shieldnet-api/alerts"

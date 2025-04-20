@@ -19,9 +19,30 @@ ShieldNet_AI_Defender/
 │   └── deception_engine/
 │       ├── decoy_generator.py # LLM-powered decoy system
 │       └── decoy_templates/   # Fake data templates
-├── data/
-│   ├── processed/            # Cleaned datasets
-│   └── raw/                  # Raw input files
+├──data/
+├── raw/
+│   ├── phishing_emails/
+│   │   ├── email1.eml
+│   │   ├── email2.eml
+│   │   └── ...
+│   ├── deepfake_videos/
+│   │   ├── real_video1.mp4
+│   │   ├── deepfake_video1.mp4
+│   │   └── ...
+│   ├── adversarial_samples/
+│   │   ├── image1.png
+│   │   ├── image2.png
+│   │   └── ...
+│   └── model_inversion_queries/
+│       ├── query_log1.txt
+│       ├── query_log2.txt
+│       └── ...
+├── processed/
+│   ├── phishing_dataset.csv
+│   ├── deepfake_features.npy
+│   ├── adversarial_features.npy
+│   └── inversion_query_features.npy
+└── 
 ├── interfaces/
 │   ├── api/
 │   │   ├── endpoints.py      # FastAPI routes
